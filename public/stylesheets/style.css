@@ -1,0 +1,12 @@
+body {
+	font-size: 14px;
+	font-family: calibri, arial, sans-serif, helvetica;
+}
+
+#site-navbar {
+	box-shadow: 0 .25rem .75 rem rgba(0, 0, 0, .05);
+}
+
+#site-navbar-item {
+	font-size: x-large;
+}
