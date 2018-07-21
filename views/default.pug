@@ -5,7 +5,11 @@ html(lang='en')
 		title= title
 		link(rel='stylesheet', href='css/bootstrap.min.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
-		script(language='javascript', src='js/bootstrap.min.js')
 	body
 		include includes/navbar.pug
-		block content
+		main(role='main' class='container')
+			block content
+		include includes/site-footer.pug
+
+		// Placed at end of HTML so pages load faster
+		script(language='javascript', src='js/bootstrap.min.js')
