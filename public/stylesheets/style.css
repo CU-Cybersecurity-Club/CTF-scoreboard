@@ -1,12 +1,28 @@
 body {
 	font-size: 14px;
-	font-family: calibri, arial, sans-serif, helvetica;
+	font-family: monospace, arial, sans-serif, helvetica;
 }
 
 #site-navbar {
+	border-bottom: 1px solid #e5e5e5;
 	box-shadow: 0 .25rem .75 rem rgba(0, 0, 0, .05);
+	margin-bottom: 2rem;
+}
+
+#site-block-container {
+	max-width: 80rem;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #site-navbar-item {
 	font-size: x-large;
+	margin-left: 1rem;
+	float: right;
+}
+
+#signin-button {
+	font-size: large;
+	margin-left: 2rem;
+	float: right;
 }

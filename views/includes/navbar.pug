@@ -1,8 +1,13 @@
 //- Default site navigation bar
-div(class='d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom' id='site-navbar')
-	h5(class='my-0 mr-md-auto font-weight-bold')
-		a(class='p-2 text-dark h3' href='/')
-			| CU Cybersecurity Club
-	nav(class='navbar navbar-light' id='site-navbar-item')
-		a(class='p-2 text-muted nav-link' href='/leaderboards')
-			| Leaderboards
+div(class='sticky-top px-md-4 mb-3 bg-white' id='site-navbar')
+	div(class='p-1 justify-content-between align-items-center d-flex' id='site-block-container')
+		h5(class='my-0 mr-md-auto font-weight-bold')
+			a(class='p-2 text-dark h3' href='/')
+				| CU Cybersecurity Club
+		nav(class='navbar navbar-light justify-content-center')
+			a(class='p-2 text-muted nav-link' id='site-navbar-item' href='/about')
+				| About
+			a(class='p-2 text-muted nav-link' id='site-navbar-item' href='/leaderboards')
+				| Leaderboards
+			a(class='btn btn-outline-primary' id='signin-button' href='/')
+				| Sign in
