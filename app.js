@@ -5,8 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 // Control routing to different pages
-var indexRouter = require('./routes/index');
-var leaderboardsRouter = require('./routes/leaderboards');
+const indexRouter = require('./routes/index');
+const leaderboardsRouter = require('./routes/leaderboards');
+const signinRouter = require('./routes/sign-in');
 
 var app = express();
 
@@ -20,8 +21,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Set routers
 app.use('/', indexRouter);
 app.use('/leaderboards', leaderboardsRouter);
+app.use('/sign-in', signinRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
