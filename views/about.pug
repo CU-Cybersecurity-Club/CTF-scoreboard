@@ -1,0 +1,18 @@
+extends default
+
+block content
+	div(id='site-block-container')
+		div(class='hidden-heading')
+			div(class='px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center')
+				h1(class='display-4')= title
+			p.lead
+				| CU Cybersecurity is the home of an eclectic group of hackers and engineers who collaborate on projects, hackathons, and competitions in the realm of cybersecurity.
+		div(class='hidden-body')
+			div(class='px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center')
+				h1(class='display-6')
+					| Leadership
+			ul(style='list-style-type: none; margin-bottom: 20px;')
+				include bios/alex_curtiss.pug
+				include bios/mark_wilmes.pug
+				include bios/zachary_green.pug
+				include bios/will_shand.pug		

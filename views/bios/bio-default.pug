@@ -1,0 +1,14 @@
+//- used to generate bios for leadership in the /about page
+li(style='display: flex; margin-bottom: 4em;')
+	div.col-left
+		block profile-image
+	div.col-right
+		h3
+			strong
+				block name
+			span(class='text-muted')
+				|  (
+				block role
+				| )
+		p.lead
+			block bio
