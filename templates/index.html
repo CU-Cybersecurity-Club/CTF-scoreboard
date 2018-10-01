@@ -1,0 +1,56 @@
+<html>
+  {% include 'head.html' %}
+  <body>
+    {% include 'chat.html' %}
+    <section id="header">
+      <a id="title" class="nostyle" href="/">
+        Bandit Scoreboard
+      </a>
+      {% if user %}
+        <div class="menu-item">
+          Logged in as {{ user }}.
+        </div>
+        <a id="logout"  class="nostyle menu-item" href="logout">
+          <div id="logout" class="menu-item">
+              Logout
+          </div>
+        </a>
+      {% else %}
+        <div id="login"  class="menu-item">
+          {% if invalid_password %}
+            <span style="color: red">Invalid login!</span>
+          {% else %}
+            Login:
+          {% endif %}
+          <form action="login" method="POST">
+            <input type="text" name="username" placeholder="Username"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        <a id="signup" class="nostyle menu-item" href="signup">
+          Create account
+        </a>
+      {% endif %}
+    </section>
+    <section id="main">
+      <h3>Bandit levels</h3>
+      {% if user %}
+      Submit level password:
+      <form action="javascript:void(0);" method="POST">
+        <input type="text" name="password" id="password-submit" placeholder="Password">
+        <input type="submit" value="Submit" onclick="submit_password(this.previousElementSibling.value);">
+      </form>
+      {% endif %}
+      <table id="scoreboard">
+        <thead>
+          <th>Username</th>
+          <th>Level</th>
+        </thead>
+      </table>
+    </section>
+    {% include 'footer.html' %}
+  </body>
+
+  <script src="static/scoreboard.js" type="text/javascript"></script>
+</html>

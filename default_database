@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS tokens;
+DROP TABLE IF EXISTS chats;
+CREATE TABLE IF NOT EXISTS users (user TEXT, password_hash TEXT, password_salt TEXT, bandit_score INTEGER);
+CREATE TABLE IF NOT EXISTS tokens (user TEXT, token TEXT, exp INTEGER);
+CREATE TABLE IF NOT EXISTS chats (author TEXT, posted TEXT, content TEXT);
+INSERT INTO chats (author, posted, content) VALUES ('Admin', '', 'Welcome to the Bandit scoreboard!');
